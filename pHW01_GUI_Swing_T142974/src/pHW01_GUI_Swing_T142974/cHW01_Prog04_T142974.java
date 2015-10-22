@@ -28,7 +28,7 @@ public class cHW01_Prog04_T142974 extends JFrame {
 	}
 
 	public cHW01_Prog04_T142974() {
-		JLabel lbl1 = new JLabel("Select Your workspace"), lbl2 = new JLabel(
+		JLabel lbl1 = new JLabel("banana"), lbl2 = new JLabel(
 				"Working Space");
 		JTextField txt1 = new JTextField();
 		JCheckBox ck = new JCheckBox("Use this as default and do not ask again");
