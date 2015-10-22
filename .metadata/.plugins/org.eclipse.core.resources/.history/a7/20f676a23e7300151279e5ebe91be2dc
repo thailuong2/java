@@ -1,0 +1,59 @@
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+/**
+ * 
+ */
+
+/**
+ *Luong Quoc Thai T142974
+ *
+ */
+public class CHW03_Prog02_Panel extends JPanel {
+	 int t;
+	int i;
+	BufferedImage imgs[] = new BufferedImage[3];
+	String[] sFilenames = {	"D:/WS/pHW03_TrafficLight_ T142974/IMG/Untitled.png",
+			"D:/WS/pHW03_TrafficLight_ T142974/IMG/Untitled1.png",
+			"D:/WS/pHW03_TrafficLight_ T142974/IMG/Untitled2.png",
+			};
+	
+	public CHW03_Prog02_Panel(){
+		 try {
+	            for ( i = 0; i < 3; i++) {
+
+	                imgs[i] = ImageIO.read(new File(sFilenames[i]));
+
+	            }
+	        } catch (IOException ex) {
+	            Logger.getLogger(cHW03_Prog01_ManualTrafficLight_T142974.class.getName()).log(Level.SEVERE, null, ex);
+	        }
+	}
+	public  void red(){
+		t=1;
+	}
+	public void yellow(){
+		t=2;
+	}
+	public void Green(){
+		t=3;
+	}
+	public void paint(Graphics g){
+			if(t==1){
+			g.drawImage(imgs[0],50,100, (ImageObserver) this);
+		}
+			if(t==2){
+				g.drawImage(imgs[1],50,100, (ImageObserver) this);
+			}
+			if(t==3){
+				g.drawImage(imgs[2],50,100, (ImageObserver) this);
+		}}
+}

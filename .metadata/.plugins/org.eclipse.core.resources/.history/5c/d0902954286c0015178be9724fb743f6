@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package demoDraw;
+
+import javax.swing.JFrame;
+
+/**
+ * @author 
+ *
+ */
+public class drawCar extends JFrame{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		drawCar wMain = new drawCar();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+	public drawCar (){
+		setTitle("car");
+		setSize(500,800);
+		setLayout(null);
+	}
+}

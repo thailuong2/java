@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/pHW04_GUI_T142974/src/pHW04_GUI_T142974/cHW04_Prog01_Sum_T142974.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="pHW04_GUI_T142974.cHW04_Prog01_Sum_T142974"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="pHW04_GUI_T142974"/>
+</launchConfiguration>

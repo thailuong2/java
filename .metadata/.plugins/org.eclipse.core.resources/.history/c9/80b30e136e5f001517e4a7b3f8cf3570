@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package pHW01_GUI_Swing_T142974;
+
+import javax.swing.JFrame;
+
+/**
+ * @author Thai Dep Trai
+ *
+ */
+public class cHW01_Prog05_T142974 extends JFrame {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

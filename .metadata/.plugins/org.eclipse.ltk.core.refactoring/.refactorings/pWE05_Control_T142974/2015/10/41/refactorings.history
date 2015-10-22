@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;pWE05_Control_T142974&apos;&#x0D;&#x0A;- Original project: &apos;pWE05_Control_T142974&apos;&#x0D;&#x0A;- Original element: &apos;pWE05_Control_T142974.cPro01_Control_Panel.java&apos;" description="Delete element" element1="/src&lt;pWE05_Control_T142974{cPro01_Control_Panel.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1444265660461" subPackages="false" version="1.0"/>
+</session>

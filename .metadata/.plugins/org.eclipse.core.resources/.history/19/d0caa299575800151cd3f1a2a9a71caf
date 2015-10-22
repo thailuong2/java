@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package demo;
+
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/**
+ * @author quoc thai t142974
+ *
+ */
+public class demo1 extends JFrame {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		demo1 wMain = new demo1();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+
+	}
+
+	JLabel label = new JLabel("helloooo");
+	JTextField o1 = new JTextField(), o2 = new JTextField(),
+			o3 = new JTextField(),
+			o4 = new JTextField();
+	JButton b1=new JButton("enter");
+
+	public demo1() {
+		setTitle("hello");
+		setSize(250, 300);
+		setLocation(100, 100);
+		setLayout(null);
+		add(label);
+		label.setBounds(10, 5, 100, 25);
+		label.setForeground(Color.red);
+		add(o1);
+		add(o2);
+		o1.setBounds(10, 30, 50, 25);
+		o2.setBounds(65, 30, 50, 25);
+		add(o3);
+		o3.setBounds(120, 30, 50, 25);
+		add (o4);
+		o4.setBounds(10,60,160,25);
+		add(b1,"North",1);
+		b1.setBounds(10,90,160,25);
+	}
+}

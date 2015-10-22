@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/pHW03_TrafficLight_ T142974/src/cHW03_Prog02_ManualTrafficControl_T142974.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cHW03_Prog02_ManualTrafficControl_T142974"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="pHW03_TrafficLight_ T142974"/>
+</launchConfiguration>

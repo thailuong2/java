@@ -1,0 +1,56 @@
+import java.awt.Image;
+import java.net.URL;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+
+/**
+ * Luong Quoc Thai T142974
+ *
+ */
+public class cHW03_Prog01_ManualTrafficControl_T142974 extends JFrame {
+	JLabel Gt = new JLabel("Green Time"),
+			Rt = new JLabel("Red Time"),
+			Yt = new JLabel("Yellow Time");
+	 Icon icon = new ImageIcon(getClass().getResource("Untitled.png"));
+	JLabel lbl = new JLabel(icon);
+	JTextField sG = new JTextField(),
+			sR = new JTextField(),
+			sY = new JTextField();
+	JButton apply = new  JButton("Apply");
+	
+	public cHW03_Prog01_ManualTrafficControl_T142974(){
+		setTitle("Traffic Light Control");
+		setSize(500,500);
+		setLayout(null);
+		add(sR);add(sG);add(sY);
+		add(Gt);add(Rt);add(Yt);
+		Gt.setBounds(10,10,80,20);
+		sG.setBounds(100,10,50,20);
+		Rt.setBounds(10,35,80,20);
+		sR.setBounds(100,35,50,20);
+		Yt.setBounds(10,60,80,20);
+		sY.setBounds(100,60,50,20);
+		add(apply);
+		apply.setBounds(50,100,80,25);
+	add(lbl);
+		//lbl.setBounds(10,130,200,200);
+	}
+	private ImageIcon ImageIcon(URL resource) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static void main(String[] args) {
+		cHW03_Prog01_ManualTrafficControl_T142974 wMain =  new cHW03_Prog01_ManualTrafficControl_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+}

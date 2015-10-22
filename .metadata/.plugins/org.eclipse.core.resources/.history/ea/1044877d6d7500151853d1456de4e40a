@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+/**
+ * @author Thai Dep Trai
+ *
+ */
+public class cHW04_Prog01_Sum_T142974 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

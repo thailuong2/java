@@ -1,0 +1,12 @@
+import javax.swing.JPanel;
+
+/**
+ * 
+ */
+
+/**
+ *
+ */
+public class paint extends JPanel {
+	public void 
+}

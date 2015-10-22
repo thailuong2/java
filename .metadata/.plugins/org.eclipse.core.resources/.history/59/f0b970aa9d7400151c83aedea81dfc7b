@@ -1,0 +1,33 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+/**
+ * 
+ */
+
+/**
+ * Luong Quoc Thai T142974
+ *
+ */
+public class cHW03_Prog02_ManualTrafficControl_v2_Panel_T142974 extends JPanel {
+	Timer Cou = null	;
+	public cHW03_Prog02_ManualTrafficControl_v2_Panel_T142974 (){
+		setBackground(Color.white);
+		Cou = new Timer(1000, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+			}
+		});
+	}
+	public void paint(Graphics g){
+	//g.drawImage(arg0, arg1, arg2, arg3)	
+	}
+}

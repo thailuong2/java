@@ -1,0 +1,27 @@
+import javax.swing.JFrame;
+
+/**
+ * 
+ */
+
+/**
+ * @auth
+ *
+ */
+public class main extends JFrame {
+
+	paint clock = new paint();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		main wMain = new main();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+	public main(){
+		setTitle("clock");
+		setSize(300,300);
+		setLayout(null);
+		add(clock);
+		clock.setBounds(50,50,100,100);
+	}
+}

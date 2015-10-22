@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;pHW01_GUI_Swing_T142974&apos;&#x0D;&#x0A;- Original project: &apos;pHW01_GUI_Swing_T142974&apos;&#x0D;&#x0A;- Original element: &apos;pHW01_GUI_Swing_T142974.cHW01_Prog06B_T142974.java&apos;" description="Delete element" element1="/src&lt;pHW01_GUI_Swing_T142974{cHW01_Prog06B_T142974.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1442740954787" subPackages="false" version="1.0"/>
+</session>

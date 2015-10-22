@@ -1,0 +1,24 @@
+import javax.swing.JFrame;
+
+/**
+ * 
+ */
+
+/**
+ * @author Thai Dep Trai
+ *
+ */
+public class cHW03_Prog01_TrafficLight_T142974 extends JFrame {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		cHW03_Prog01_TrafficLight_T142974 wMain = new cHW03_Prog01_TrafficLight_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+	public cHW03_Prog01_TrafficLight_T142974(){
+		
+	}
+}

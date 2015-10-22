@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package demoDraw;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+/**
+ * @author 
+ *
+ */
+public class drawCar extends JFrame{
+	
+	paint_car1 a = new paint_car1();
+	paint_car2 b  = new paint_car2();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		drawCar wMain = new drawCar();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+	public drawCar (){
+		setTitle("car");
+		setSize(500,800);
+		setLayout(null);
+		add(a);
+		add(b);
+		a.setBounds(10,10,120,120);
+		b.setBounds(10,135,82,25);
+	}
+}
