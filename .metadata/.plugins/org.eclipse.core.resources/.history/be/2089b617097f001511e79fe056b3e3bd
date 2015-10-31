@@ -1,0 +1,30 @@
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+/**
+ * 
+ */
+
+/**
+ * @author
+ *
+ */
+public class sd extends JFrame {
+	b  a = new b();
+	public static void main(String[] args) {
+		sd wMain = new sd();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+		
+
+	}
+		public sd(){
+			setSize(300,300);
+			setLayout(null);
+			
+			add(a);
+			a.setBounds(10,10,100,100);
+		}
+		
+}

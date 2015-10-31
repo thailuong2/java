@@ -1,0 +1,31 @@
+import javax.swing.JFrame;
+import java.awt.*;
+import java.awt.event.*;
+public class ads extends JFrame{
+    public static void main(String args[])
+    {
+        JFrame frame = new JFrame("My frame");
+        Choice myChoice = new Choice();
+        myChoice.addItem("Red");
+        myChoice.addItem("Green");
+        myChoice.addItem("Blue");
+        myChoice.addItemListener(new ItemListener()
+        {
+            public void itemStateChanged(ItemEvent e)
+            {
+                if(e.getStateChange()==ItemEvent.SELECTED)
+                {
+                    String s=(String)e.getItem();
+                    System.out.println(s);
+                }
+            }
+        });
+        frame.add(myChoice);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+    public ads (){
+    	setSize(500,500);
+    }
+}

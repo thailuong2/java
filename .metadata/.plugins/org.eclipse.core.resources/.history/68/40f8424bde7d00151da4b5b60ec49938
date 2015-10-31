@@ -1,0 +1,66 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cPro03_CountNumbers_T142974 extends JFrame {
+	JLabel lbl1 = new JLabel("Input");
+	JTextField txt1 = new JTextField();
+	JButton btn1 = new JButton("Check");
+	JButton btn2 = new JButton("Clear");
+	JTextArea a = new JTextArea();
+	JScrollPane b = new JScrollPane(a);
+	int num =0;
+	public static void main(String[] args) {
+		cPro03_CountNumbers_T142974 wMain = new cPro03_CountNumbers_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+
+	}
+
+	public cPro03_CountNumbers_T142974() {
+		setTitle(" Integer Array - T142974");
+		setSize(300, 300);
+		setLayout(null);
+		add(lbl1);add(txt1);add(btn1);add(btn2);
+		add(b);
+		lbl1.setBounds(10,10,50,25);
+		txt1.setBounds(65,10,150,25);
+		btn1.setBounds(10,50,100,25);
+		btn2.setBounds(120,50,100,25);
+		b.setBounds(10,80,200,180);
+		btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String [] get = (txt1.getText()).split(" ");
+				for(int i=0;i<get.length;i++){
+					num = Integer.parseInt(get[i]);
+					if((num%2)==0)	{
+						a.append(""+num+"\n");
+					}
+					a.append(""+"\n");
+					if(num%3==0){
+						a.append(""+num+"\n");
+					}
+					
+				}
+			}
+		});
+	}
+}

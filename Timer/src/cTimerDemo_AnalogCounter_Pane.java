@@ -57,9 +57,6 @@ public class cTimerDemo_AnalogCounter_Pane extends JPanel {
 		g.drawLine(x0, y0, x1, y1);
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

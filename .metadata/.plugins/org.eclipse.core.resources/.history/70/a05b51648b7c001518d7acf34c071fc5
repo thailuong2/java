@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import javax.swing.JFrame;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog04_DigitalClock_T142974 extends JFrame {
+
+	
+	public static void main(String[] args) {
+		cHW04_Prog04_DigitalClock_T142974 wMain = new  cHW04_Prog04_DigitalClock_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+
+	}
+	public cHW04_Prog04_DigitalClock_T142974(){
+		setTitle(" T142974 - Digital Clock ");
+		setSize(300,200);
+		
+	}
+}

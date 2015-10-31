@@ -1,0 +1,101 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+
+/**
+ * @author Luong Quoc Thai T42974
+ *
+ */
+public class cPro03_SortedNumber_T142974 extends JFrame {
+	JTextField a = new JTextField(), b = new JTextField(),
+			c = new JTextField();
+	JLabel a1 = new JLabel("Nhap so A = "), b1 = new JLabel("Nhap so B = "),
+			c1 = new JLabel("Nhap so C = ");
+	JButton check = new JButton("Check"), clear = new JButton("Clear");
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cPro03_SortedNumber_T142974 wMain = new cPro03_SortedNumber_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+
+	public cPro03_SortedNumber_T142974() {
+
+		setTitle("3 Sorted Number - T142974");
+		setSize(400, 200);
+		setLayout(null);
+
+		add(a);
+		add(check);
+		add(b);
+		add(clear);
+		add(c);
+		add(a1);
+		add(b1);
+		add(c1);
+
+		a1.setBounds(10, 10, 100, 25);
+		a.setBounds(90, 10, 50, 25);
+		b1.setBounds(10, 40, 100, 25);
+		b.setBounds(90, 40, 50, 25);
+		c1.setBounds(10, 70, 100, 25);
+		c.setBounds(90, 70, 50, 25);
+		check.setBounds(200, 10, 100, 25);
+		clear.setBounds(200, 40, 100, 25);
+
+		ActionListener all = new ActionListener() {
+
+			public void actionPerformed1(ActionEvent e) {
+
+				String num1 = a.getText();
+				String num2 = b.getText();
+				String num3 = c.getText();
+
+				int nun1 = 0, nun2 = 0, nun3 = 0;
+
+				try {
+					nun1 = Integer.parseInt(num1);
+					nun2 = Integer.parseInt(num2);
+					nun3 = Integer.parseInt(num2);
+				} catch (NumberFormatException arg0) {
+					JOptionPane.showMessageDialog(null, "Invalid Input",
+							"Warning", JOptionPane.WARNING_MESSAGE);
+				}
+
+				if (e.getSource() == check) {
+					if (nun1 <= nun2) {
+						if (nun2 <= nun3) {
+							JOptionPane.showMessageDialog(null,
+									"Thoa man A <= B <= C", "Thong Bao",
+									JOptionPane.WARNING_MESSAGE);
+						}
+					}
+				} else {
+					a.setText("");
+					b.setText("");
+					c.setText("");
+				}
+
+			}
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+		};
+		check.addActionListener(all);
+		clear.addActionListener(all);
+	}
+
+}

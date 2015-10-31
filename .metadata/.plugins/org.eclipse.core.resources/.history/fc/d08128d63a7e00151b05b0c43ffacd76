@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog09_TetrisT_T142974 extends JFrame {
+	JButton btn1 = new JButton("Left"), btn2 = new JButton("Right"),
+			btn3 = new JButton("Up"), btn4 = new JButton("Down");
+	public static void main(String[] args) {
+		cHW04_Prog09_TetrisT_T142974 Main = new cHW04_Prog09_TetrisT_T142974();
+		Main.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		Main.setVisible(true);
+
+	}
+	public cHW04_Prog09_TetrisT_T142974(){
+		setTitle("Tetris moving (T) - T142974 ");
+		setSize(600,800);
+		setLayout(null);
+		
+	}
+}

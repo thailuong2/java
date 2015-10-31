@@ -1,0 +1,35 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cPro01_DateValidation_T142974 extends JFrame {
+	JLabel lbl1 = new JLabel("Full Name : "),
+			lbl2 = new JLabel("DoB	:");
+	JTextField txt1 = new JTextField(),
+			txt2 = new JTextField();
+	JButton btn1 = new JButton("Check"),
+			btn2 = new JButton("clear");
+	public static void main(String[] args) {
+	 cPro01_DateValidation_T142974 wMain = new cPro01_DateValidation_T142974();
+	 wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	 wMain.setVisible(true);
+
+	}
+	public cPro01_DateValidation_T142974(){
+		setTitle(" Form Validation - T142974");
+		setSize(300,200);
+		setLayout(null);
+		add(lbl1);add(lbl2);add(txt1);add(txt2);add(btn1);add(btn2);
+		lbl1.setBounds(10,10,100,25);
+	
+	}
+}

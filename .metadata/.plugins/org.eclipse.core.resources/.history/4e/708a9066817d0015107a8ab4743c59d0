@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cTetrisL_Panel_T142974 extends JPanel {
+	public cTetrisL_Panel_T142974(){
+		
+	}
+	public void paint(Graphics g){
+		super.paint(g);
+		g.setColor(Color.red);
+		g.fillRect(200, 10, 25, 25);
+		
+	}
+}

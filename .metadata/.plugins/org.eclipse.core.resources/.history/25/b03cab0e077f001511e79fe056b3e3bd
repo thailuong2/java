@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollBar;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog02_SquareRoot_T142974 extends JFrame {
+	JLabel l1 = new JLabel("Nhập Số : "),
+			l2 = new JLabel("Chọn Sai Số : ");
+	JTextField txt1 = new JTextField();
+	JButton b1 = new JButton("Tính"),
+			b2 = new JButton("Xóa"),
+			b3 = new JButton("Xóa Hết");
+	JTextArea a = new JTextArea();
+	JScrollBar b = new JScrollBar();
+	
+	public static void main(String[] args) {
+		cHW04_Prog02_SquareRoot_T142974 wMain = new cHW04_Prog02_SquareRoot_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+
+	}
+	public cHW04_Prog02_SquareRoot_T142974(){
+		setTitle("T142974 - Square Root ");
+		setSize(300,350);
+		setLayout(null);
+		add(l1);add(l2);add(txt1);add(b1);add(b2);add(b3);add(b);
+		l1.setBounds(10,10,70,25);
+		txt1.setBounds(85,10,150,25);
+		l2.setBounds(50,40,100,25);
+		
+	}
+}

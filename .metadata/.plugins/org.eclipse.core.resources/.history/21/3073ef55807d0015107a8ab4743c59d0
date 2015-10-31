@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import javax.swing.JFrame;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog08_TetrisL_T142974 extends JFrame {
+
+
+	public static void main(String[] args) {
+		cHW04_Prog08_TetrisL_T142974 Main = new cHW04_Prog08_TetrisL_T142974();
+		Main.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		Main.setVisible(true);
+	}
+	public cHW04_Prog08_TetrisL_T142974(){
+		setTitle(" Tetris moving (L) - T142974 ");
+		setSize(600,800);
+		setLayout(null);
+	}
+}

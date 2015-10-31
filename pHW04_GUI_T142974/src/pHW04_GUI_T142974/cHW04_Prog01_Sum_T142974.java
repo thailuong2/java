@@ -28,7 +28,7 @@ public class cHW04_Prog01_Sum_T142974 extends JFrame {
 	
 	double sum=0,num;
 	
-
+int x;
 	public static void main(String[] args) {
 		cHW04_Prog01_Sum_T142974 wMain = new cHW04_Prog01_Sum_T142974();
 		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -66,10 +66,14 @@ public class cHW04_Prog01_Sum_T142974 extends JFrame {
 						
 						}else{
 							for(double i=1;i<=3*num+1;i++){
-								
-								sum =sum+(i/(i+1));
+								if(i%2==0){
+									x=-1;
+								}if(i%2!=0||(1/2==0.5)){
+									x=1;
+								}
+								sum =sum+(((i/(i+1))*x));
 							}
-							a.append(""+sum+"\n");
+							a.append(""+(sum)+"\n");
 						}
 					} catch (Exception e2) {
 						a.append("Invalid Input" + "\n");

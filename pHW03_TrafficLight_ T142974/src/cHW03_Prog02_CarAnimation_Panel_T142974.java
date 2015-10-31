@@ -25,7 +25,7 @@ public class cHW03_Prog02_CarAnimation_Panel_T142974 extends JPanel {
 	int x = 0, y = 5,k=0;
 	// tạo array lưu nguồn hình
 	BufferedImage Img[] = new BufferedImage[1];
-	String[] a = { "IMG/Car-08.gif",
+	String[] a = { "IMG/Car-08.gif"
 
 	};
 

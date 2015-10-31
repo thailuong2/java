@@ -1,0 +1,64 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog08_TetrisL_T142974 extends JFrame {
+	cTetrisL_Panel_T142974 a = new cTetrisL_Panel_T142974();
+	JButton btn1 = new JButton("Left"), btn2 = new JButton("Right"),
+			btn3 = new JButton("Up"), btn4 = new JButton("Down");
+
+	public static void main(String[] args) {
+		cHW04_Prog08_TetrisL_T142974 Main = new cHW04_Prog08_TetrisL_T142974();
+		Main.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		Main.setVisible(true);
+	}
+
+	public cHW04_Prog08_TetrisL_T142974() {
+		setTitle(" Tetris moving (L) - T142974 ");
+		setSize(600, 800);
+		setLayout(null);
+		add(a);
+		a.setBounds(0, 0, 600, 625);
+		add(btn1);
+		add(btn2);
+		add(btn3);
+		add(btn4);
+		btn1.setBounds(10, 650, 100, 25);
+		btn2.setBounds(115, 650, 100, 25);
+		btn3.setBounds(220, 650, 100, 25);
+		btn4.setBounds(325, 650, 100, 25);
+		ActionListener all = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btn1) {
+					a.left();
+				}
+				if (e.getSource() == btn2) {
+					a.right();
+				}
+				if (e.getSource() == btn3) {
+					a.up();
+				}
+				if (e.getSource() == btn4) {
+					a.down();
+				}
+			}
+		};
+		btn1.addActionListener(all);
+		btn2.addActionListener(all);
+		btn3.addActionListener(all);
+		btn4.addActionListener(all);
+	}
+}

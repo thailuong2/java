@@ -51,7 +51,7 @@ public class event extends JFrame {
 		lbl1.setBounds(10, 5, 50, 25);
 		bnttrans.setBounds(10, 50, 100, 25);
 		// bntCut.setBounds(115,50,100,25);
-		txt1.setBounds(70, 5, 150, 25);1
+		txt1.setBounds(70, 5, 150, 25);
 		lbl1.setText("Input");
 		
 		add(b);

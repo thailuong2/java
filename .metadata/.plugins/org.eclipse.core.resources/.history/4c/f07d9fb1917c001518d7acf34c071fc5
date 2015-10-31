@@ -1,0 +1,63 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog05_AnalogClock_Panel_T142974 extends JPanel {
+	Timer S = null, M = null, H = null;
+	int R1= 100,R2=70,R3=50;
+	int x0 = 200, y0 = 200;
+	
+	int goc = 0;
+
+	public cHW04_Prog05_AnalogClock_Panel_T142974() {
+		S = new Timer(1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				goc = goc - 6;
+			}
+
+		});
+		S.start();
+		M = new Timer(60*1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				goc = goc - 6;
+			}
+
+		});
+		M.start();
+		H = new Timer(1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				goc = goc - 6;
+			}
+
+		});
+		H.start();
+	}
+
+	public void paint(Graphics g) {
+		super.paint(g);
+		int x1 = (int) (x0 + R1 * Math.cos(goc / 180.0)), y1 = (int) (y0 - R1
+				* Math.sin(goc / 180.0));
+		int xx1 = (int) (x0 + R2 * Math.cos(goc / 180.0)), yy1 = (int) (y0 - R2
+				* Math.sin(goc / 180.0));
+		g.drawLine(x0, y0, x1, y1);
+		g.drawOval(100, 100, 200, 200);
+	}
+}

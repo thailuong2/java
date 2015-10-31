@@ -1,0 +1,94 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+
+/**
+ * @author Luong Quoc Thai T42974
+ *
+ */
+public class cPro03_SortedNumber_T142974 extends JFrame {
+	JTextField a = new JTextField(), b = new JTextField(),
+			c = new JTextField();
+	JLabel a1 = new JLabel("Nhap so A = "), b1 = new JLabel("Nhap so B = "),
+			c1 = new JLabel("Nhap so C = ");
+	JButton check = new JButton("Check"), clear = new JButton("Clear");
+	int A = 0, B = 0, C = 0;
+	int k,l;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cPro03_SortedNumber_T142974 wMain = new cPro03_SortedNumber_T142974();
+		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		wMain.setVisible(true);
+	}
+
+	public cPro03_SortedNumber_T142974() {
+
+		setTitle("3 Sorted Number - T142974");
+		setSize(400, 200);
+		setLayout(null);
+
+		add(a);
+		add(check);
+		add(b);
+		add(clear);
+		add(c);
+		add(a1);
+		add(b1);
+		add(c1);
+
+		a1.setBounds(10, 10, 100, 25);
+		a.setBounds(90, 10, 50, 25);
+		b1.setBounds(10, 40, 100, 25);
+		b.setBounds(90, 40, 50, 25);
+		c1.setBounds(10, 70, 100, 25);
+		c.setBounds(90, 70, 50, 25);
+		check.setBounds(200, 10, 100, 25);
+		clear.setBounds(200, 40, 100, 25);
+
+		check.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					A = Integer.parseInt(a.getText());
+					B = Integer.parseInt(b.getText());
+					C = Integer.parseInt(c.getText());
+					if(A<=B){
+						if(B<=C){
+							JOptionPane.showMessageDialog(null, "Nhập Đúng",
+									"Thông Báo", JOptionPane.WARNING_MESSAGE);
+						}
+					}
+				} catch (NumberFormatException exception) {
+					JOptionPane.showMessageDialog(null, "Nhập Sai",
+							"Thông Báo", JOptionPane.WARNING_MESSAGE);
+				}
+				
+			}
+		});
+	}}
+				
+
+				
+					
+					
+					
+					
+				
+
+			
+
+			
+		
+	
+
+

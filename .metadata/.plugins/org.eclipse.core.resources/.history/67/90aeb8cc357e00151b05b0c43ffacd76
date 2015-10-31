@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog08_TetrisL_T142974 extends JFrame {
+	cTetrisL_Panel_T142974 a = new cTetrisL_Panel_T142974();
+	JButton btn1 = new JButton ("Left");
+	public static void main(String[] args) {
+		cHW04_Prog08_TetrisL_T142974 Main = new cHW04_Prog08_TetrisL_T142974();
+		Main.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		Main.setVisible(true);
+	}
+	public cHW04_Prog08_TetrisL_T142974(){
+		setTitle(" Tetris moving (L) - T142974 ");
+		setSize(600,800);
+		setLayout(null);
+		add(a);
+		a.setBounds(0,0,600,800);
+		add(btn1	);
+		btn1.setBounds(10,700,100,25);
+		btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				a.left();
+				
+			}
+		});
+	}
+}

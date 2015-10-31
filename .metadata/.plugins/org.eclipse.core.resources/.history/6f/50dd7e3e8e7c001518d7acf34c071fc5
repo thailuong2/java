@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package pHW04_GUI_T142974;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+/**
+ * @author Luong Quoc Thai T142974
+ *
+ */
+public class cHW04_Prog04_DigitalClock_Panel_T142974 extends JPanel {
+	Timer S = null, M = null, H = null;
+
+	int h, m, s;
+
+	public cHW04_Prog04_DigitalClock_Panel_T142974() {
+		S = new Timer(1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				s++;
+				if (s == 60) {
+					s = 0;
+				}
+			}
+		});
+		S.start();
+		M = new Timer(60*1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				m++;
+				if (m == 60) {
+					m = 0;
+				}
+			}
+		});
+		M.start();
+		H = new Timer(3600*1000, new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				repaint();
+				h++;
+				if (h == 60) {
+					h = 0;
+				}
+			}
+		});
+		H.start();
+	}
+
+	public void paint(Graphics g) {
+		super.paint(g);
+		
+		g.drawString("" + s, 100, 50);
+		g.drawString(""+m+" "+":",80,50);
+		g.drawString(""+h+" "+":",60,50);
+	}
+}

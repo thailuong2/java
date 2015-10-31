@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+
+/**
+ * @author
+ *
+ */
+public class q3213sd {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] a = { "5,6,7" };
+		int c;
+		c=2;
+		System.out.print(""+c+a[c]);
+	}
+
+}
