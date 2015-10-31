@@ -21,102 +21,114 @@ import javax.swing.Timer;
  *
  */
 public class cHW03_Prog01_TrafficLight_Panel_T142974 extends JPanel {
-	int i = 0, x = 1000;
-	 int t = 0, c = 0;
-	 int k=10;
-	 int timeR = 5, timeG = 5, timeY = 2;
-	 Timer L = null,Cou=null;
+	int i = 0, x = 1000;// thời gian timer
+	int i1 = 0, c = 0, c1 = 0;
+	
+	// thời gian chạy các đèn
+	int timeR = 5, timeG = 5, timeY = 1;
+	// 2 timer cho đèn 1-3 , và 2-4
+	Timer L = null;
 
-BufferedImage Img[] = new BufferedImage[1];
-String[] a = { "IMG/Car-08.gif"};
 	public cHW03_Prog01_TrafficLight_Panel_T142974() {
-		
-		 
-		
+		// timer cho đèn 1-3
 		L = new Timer(x, new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 
 				i = i + x;
+				// điều kiện chạy đèn
 				if (c == 0) {
 					if (i <= timeR * x) {
 						L1();
-					} else {
+						C1();
+					}
+					// điều kiện đổi đèn
+					// tương tự với 3 màu
+					else {
 						i = 0;
 						c = 1;
 					}
 				}
-				if (c == 1) {
-					if (i <= timeG * 1000) {
+				if(c==1){
+					if(i<=timeY){
 						L2();
-					} else {
-						i = 0;
-						c = 2;
+						C2();
+					}else{
+						i=0;
+						c=2;
 					}
 				}
 				if (c == 2) {
-					if (i <= timeY * 1000) {
+					if (i <= timeG * 1000) {
 						L3();
+						C3();
+					} else {
+						i = 0;
+						c = 3;
+					}
+				}
+				if (c == 3) {
+					if (i <= timeY * 1000) {
+						L2();
+						C2();
 					} else {
 						i = 0;
 						c = 0;
 					}
+
+				}
 				
-
-				};
-
-				
-					try {
-
-						Img[0] = ImageIO.read(new File(a[0]));
-
-					} catch (IOException e1) {
-						Logger.getLogger(
-								cHW03_Prog02_CarAnimation_Panel_T142974.class.getName())
-								.log(Level.SEVERE, null, e1);
-					}
-					Cou = new Timer(200, new ActionListener() {
-
-						@Override
-						public void actionPerformed(ActionEvent e1) {
-							repaint();
-							k = k + 20;
-							if (k >= 1000) {
-								k =0;
-							}
-
-						}
-
-					});
-
-					Cou.start();
+				;
 
 			}
 		});
 		L.start();
-		
+	
 	}
 
-	int z = 0;
-
+	int l ;
+	int k ;
+	// hàm vẽ đèn đỏ cho trụ 1-3
 	public void L1() {
 		repaint();
-		z = 1;
+		l = 1;
 	}
 
+	// hàm vẽ đèn vàng 1-3
 	public void L2() {
 		repaint();
-		z = 2;
+		l = 2;
 	}
 
+	// hàm vẽ đèn xanh 1-3
 	public void L3() {
 		repaint();
-		z = 3;
+		l = 3;
 	}
-	
+	//hàm vẽ đèn xanh cho trụ 2-4
+	public void C1(){
+		repaint();
+		k=1;
+	}
+	//hàm vẽ đèn vàng cho trụ 2-4
+	public void C2(){
+		repaint();
+		k=2;
+	}
+	//hàm vẽ đèn đỏ cho trụ 2-4
+	public void C3(){
+		repaint();
+		k=3;
+	}
+	public int status() {
+		return l;
+	}
+	public int status1() {
+		return k;
+	}
 	public void paint(Graphics g) {
 		g.setColor(Color.gray);
-		
+
 		g.setColor(Color.black);
 		g.drawLine(600, 00, 600, 300);
 		g.drawLine(400, 0, 400, 300);
@@ -133,49 +145,62 @@ String[] a = { "IMG/Car-08.gif"};
 		g.fillRect(600, 260, 120, 40);
 
 		g.setColor(Color.gray);
-		//den so 1
+		// den so 1
 		g.fillOval(360, 180, 40, 40);
 		g.fillOval(360, 220, 40, 40);
 		g.fillOval(360, 260, 40, 40);
-		//den so 2
+		// den so 2
 		g.fillOval(360, 500, 40, 40);
 		g.fillOval(320, 500, 40, 40);
 		g.fillOval(280, 500, 40, 40);
-		//den so 3
+		// den so 3
 		g.fillOval(600, 500, 40, 40);
 		g.fillOval(600, 540, 40, 40);
 		g.fillOval(600, 580, 40, 40);
-		//den so 4
+		// den so 4
 		g.fillOval(600, 260, 40, 40);
 		g.fillOval(640, 260, 40, 40);
 		g.fillOval(680, 260, 40, 40);
-		if (z == 1) {
+		if (l == 1) {
 			g.setColor(Color.red);
 			g.fillOval(360, 260, 40, 40);
 			g.fillOval(600, 500, 40, 40);
+			
+
+		}
+		if (l == 2) {
+
+			g.setColor(Color.yellow);
+			g.fillOval(360, 220, 40, 40);
+			g.fillOval(600, 540, 40, 40);
+			g.fillOval(320, 500, 40, 40);
+			g.fillOval(640, 260, 40, 40);
+			
+		}
+		if (l == 3) {
+			
+			g.setColor(Color.green);
+			g.fillOval(600, 580, 40, 40);
+			g.fillOval(360, 180, 40, 40);
+		}
+		if(k==1){
 			g.setColor(Color.green);
 			g.fillOval(280, 500, 40, 40);
 			g.fillOval(680, 260, 40, 40);
-			
 		}
-		if (z == 2) {
-			
+		if(k==2){
 			g.setColor(Color.yellow);
-			g.fillOval(360, 220, 40, 40);
-			g.fillOval(640, 260, 40, 40);
-			g.fillOval(600, 540, 40, 40);
 			g.fillOval(320, 500, 40, 40);
+			g.fillOval(640, 260, 40, 40);
 		}
-		if (z == 3) {
+		if(k==3){
 			g.setColor(Color.red);
 			g.fillOval(360, 500, 40, 40);
 			g.fillOval(600, 260, 40, 40);
-			g.setColor(Color.green);
-			g.fillOval(360, 260, 40, 40);
-			g.fillOval(600, 580, 40, 40);
 		}
-		g.drawImage(Img[0], k, 350, this);
+
 	}
+
 	
 
-}
+}// end class

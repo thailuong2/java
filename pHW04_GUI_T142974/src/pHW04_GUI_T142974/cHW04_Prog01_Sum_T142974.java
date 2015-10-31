@@ -16,51 +16,72 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
- *Luong Quoc Thai T142974
+ * Luong Quoc Thai T142974
  *
  */
 public class cHW04_Prog01_Sum_T142974 extends JFrame {
-	JButton btn1 = new  JButton("Tính"),
-			btn2 = new JButton("Xóa");
+	JButton btn1 = new JButton("Tính"), btn2 = new JButton("Xóa");
 	JLabel lbl1 = new JLabel("Nhập n ");
 	JTextField txt1 = new JTextField();
 	JTextArea a = new JTextArea();
-	JScrollPane b = new JScrollPane(a); 
-	public static void main(String[] args)  {
+	JScrollPane b = new JScrollPane(a);
+	
+	double sum=0,num;
+	
+
+	public static void main(String[] args) {
 		cHW04_Prog01_Sum_T142974 wMain = new cHW04_Prog01_Sum_T142974();
 		wMain.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		wMain.setVisible(true);
 
 	}
-	public cHW04_Prog01_Sum_T142974(){
-		setSize(300,300);
+
+	public cHW04_Prog01_Sum_T142974() {
+		setSize(300, 300);
 		setTitle("Sum-T142974");
 		setLayout(null);
-		add(btn1);add(btn2);add(lbl1);add(txt1);
-		//add(a);
+		add(btn1);
+		add(btn2);
+		add(lbl1);
+		add(txt1);
+	
 		add(b);
 		Insets insButton = new Insets(1, 1, 1, 1);
-		lbl1.setBounds(10,10,50,25);
-		txt1.setBounds(65,10,100,25);
+		lbl1.setBounds(10, 10, 50, 25);
+		txt1.setBounds(65, 10, 100, 25);
 		btn1.setMargin(insButton);
 		btn2.setMargin(insButton);
-		btn1.setBounds(10,40,50,25);
-		btn2.setBounds(65,40,50,25);
-		b.setBounds(10,70,250,180);
+		btn1.setBounds(10, 40, 50, 25);
+		btn2.setBounds(65, 40, 50, 25);
+		b.setBounds(10, 70, 250, 180);
 		ActionListener all = new ActionListener() {
-			
-			@Override
+
 			public void actionPerformed(ActionEvent e) {
-				int num;
-				if(e.getSource()==btn1){
-			try {
-				num = Integer.parseInt(txt1.getText());
-			} catch (Exception e2) {
-				a.append("Invalid Input"+"\n");
-			}}
-				
+
+				if (e.getSource() == btn1) {
+					try {
+						num = Double.parseDouble(txt1.getText());
+						if (num <= 0) {
+							a.append("Invalid Input" + "\n");
+						
+						}else{
+							for(double i=1;i<=3*num+1;i++){
+								
+								sum =sum+(i/(i+1));
+							}
+							a.append(""+sum+"\n");
+						}
+					} catch (Exception e2) {
+						a.append("Invalid Input" + "\n");
+					}
+				}
+				if(e.getSource()==btn2){
+					txt1.setText("");
+					a.setText("");
+				}
 			}
 		};
 		btn1.addActionListener(all);
+		btn2.addActionListener(all);
 	}
-}	
+}

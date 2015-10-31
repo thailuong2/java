@@ -22,11 +22,7 @@ public class cHW03_Prog02_ManualTrafficControl_v2_T142974 extends JFrame {
 			Yt = new JLabel("Yellow Time");
 	JTextField sG = new JTextField(), sR = new JTextField(),
 			sY = new JTextField();
-	ImageIcon icon1 = new ImageIcon("IMG/Untitled.png"), icon2 = new ImageIcon(
-			"IMG/Untitled1.png"), icon3 = new ImageIcon("IMG/Untitled2.png");
-	JLabel lbl1 = new JLabel(icon1);
-	JLabel lbl2 = new JLabel(icon2);
-	JLabel lbl3 = new JLabel(icon3);
+	
 	JButton apply = new JButton("Apply");
 	int gt, rt, yt, c = 0, x = 0, g = 1000;
 
@@ -55,56 +51,63 @@ public class cHW03_Prog02_ManualTrafficControl_v2_T142974 extends JFrame {
 		sY.setBounds(100, 60, 50, 20);
 		add(apply);
 		apply.setBounds(50, 100, 80, 25);
-		add(lbl1);
-		add(lbl2);
-		add(lbl3);
+		
 		add(a);
 		a.setBounds(10, 150, 300, 300);
 		apply.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+
 				try {
+					// chuyển chuổi nhập vào thành số
 					gt = Integer.parseInt(sG.getText());
 					rt = Integer.parseInt(sR.getText());
 					yt = Integer.parseInt(sY.getText());
+					Timer s = new Timer(g, new ActionListener() {
+
+						public void actionPerformed(ActionEvent arg0) {
+
+							x = x + g;
+							// điều kiện để chạy
+							if (c == 0) {
+
+								if (x <= gt * 1000) {
+									// gọi hàm vẽ đèn đỏ
+									a.redT();
+								} 
+								//điều kiện để chuyển đèn
+								//tương tự với 2 đèn còn lại
+								else {
+									c = 1;
+									x = 0;
+								}
+							}
+							if (c == 1) {
+								if (x <= rt * 1000) {
+									a.greenT();
+								} else {
+									c = 2;
+									x = 0;
+								}
+							}
+							if (c == 2) {
+								if (x <= yt * 1000) {
+									a.yellowT();
+								} else {
+									c = 0;
+									x = 0;
+								}
+							}
+						}
+					});
+					s.start();
 				} catch (NumberFormatException e2) {
 					System.out.print("loi");
 				}
-				Timer s = new Timer(g, new ActionListener() {
 
-					@Override
-					public void actionPerformed(ActionEvent arg0) {
-						// TODO Auto-generated method stub
-						x = x + g;
-						if (c == 0) {
-							if (x <= gt * 1000) {
-								a.redT();
-							} else {
-								c = 1;
-								x = 0;
-							}
-						}
-						if (c == 1) {
-							if (x <= rt * 1000) {
-								a.greenT();
-							} else {
-								c = 2;
-								x = 0;
-							}
-						}
-						if (c == 2) {
-							if (x <= yt * 1000) {
-								a.yellowT();
-							} else {
-								c = 0;
-								x = 0;
-							}
-						}
-					}
-				});
-				s.start();
 			}
 		});
 	}
 }
+//end class

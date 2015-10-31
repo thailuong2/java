@@ -34,7 +34,7 @@ public class event extends JFrame {
 	}
 
 	public event() {
-		setTitle("ananananana");
+		setTitle("erthgthrght");
 		setSize(250, 250);
 		setLayout(null);
 		JLabel lbl1 = new JLabel("Source");
